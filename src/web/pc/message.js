@@ -97,7 +97,6 @@ let intervalId; // Переменная для хранения ID интерв�
 storage =  await list(tag_post) 
 storage = await massiveList(storage, key);
 storage = await massiveUp(storage)
-console.log(storage)
 container_chat.element.innerHTML = "";
 await constructor(container_chat, storage);
 container_chat.element.scrollTop = container_chat.element.scrollHeight;
@@ -107,7 +106,6 @@ async function chat() {
      storage_end =  await list(tag_post)
      storage_end = await massiveList(storage_end,key)
      storage_end = await massiveUp(storage_end)
-     console.log(storage_end)
 
     if(storage_end.length !== storage.length){
         storage = storage_end

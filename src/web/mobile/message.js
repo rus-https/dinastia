@@ -18,7 +18,7 @@ const tag_post = escapeHtmlUp(tag)
 const icon_post = await icon()
 const emblem_post = await emblem()
 
-const navbar =  await navbarMobile(icon_post,emblem_post)
+const navbar =  await navbarMobile(emblem_post)
 
 const container_chat = new DIV()
 container_chat.element.style.width = "100%"
@@ -104,7 +104,7 @@ container_chat.element.scrollTop = container_chat.element.scrollHeight;
 async function chat() {
     try {
     storage_end =  await list(tag_post) 
-    storage_end = await massiveList (storage,key)
+    storage_end = await massiveList (storage_end,key)
     storage_end = await massiveUp (storage_end)
 
     if(storage_end.length > storage.length){
